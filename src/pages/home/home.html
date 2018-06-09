@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <img src="assets/imgs/video.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        Vidéos
+      </ion-card-title>
+      <p>
+        Accédez directement à vos vidéos via cette application.
+      </p>
+    </ion-card-content>
+    <ion-row padding>
+      <button ion-button primary full (click)="openPage('videos')">Voir les vidéos</button>
+    </ion-row>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/live.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        Live
+      </ion-card-title>
+      <p>
+        Accédez directement aux lives via cette application.
+      </p>
+    </ion-card-content>
+    <ion-row padding>
+      <button ion-button primary full (click)="openPage('live')">Voir les live</button>
+    </ion-row>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/magazine.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        Magazines
+      </ion-card-title>
+      <p>
+        Accédez directement à vos magazines via cette application.
+      </p>
+    </ion-card-content>
+    <ion-row padding>
+      <button ion-button primary full (click)="openPage('magazine')">Voir les magazines</button>
+    </ion-row>
+  </ion-card>
+
+
+</ion-content>

@@ -1,0 +1,40 @@
+<!--
+  Generated template for the VideosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>videos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-fab top right edge (click)="refresh($event)">
+    <button ion-fab mini color="danger"><ion-icon name="refresh"></ion-icon></button>
+  </ion-fab>
+  <ion-list no-padding>
+    <ion-item *ngFor="let list of videos">
+      <ion-thumbnail item-start>
+        <img [src]="list.snippet.thumbnails.default.url">
+      </ion-thumbnail>
+      <p style="font-weight: bold;">{{ list.snippet.title }}</p>
+      <p>{{ list.snippet.publishedAt | date:'short' }}</p>
+      <p side="left">
+        <button ion-button color="primary" (click)="openModal(list)">
+          <ion-icon name="ios-information-circle-outline"></ion-icon>
+        </button>
+        <button ion-button color="danger" (click)="openVideo($event, list.id.videoId)">
+          <ion-icon name="play"></ion-icon>
+        </button>
+      </p>
+    </ion-item>
+  </ion-list>
+</ion-content>
